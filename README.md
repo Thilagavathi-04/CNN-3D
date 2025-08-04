@@ -320,7 +320,3 @@ This project is open source and available under the MIT License.
 - Test changes with multiple image types
 - Ensure 3D animations are smooth and educational
 - Maintain the pastel design theme consistency
-
----
-
-**Made with ❤️ for CNN education and visualization**
