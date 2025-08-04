@@ -1,0 +1,6 @@
+@echo off
+echo Installing packages...
+pip install flask flask-cors pillow numpy
+echo Starting server...
+python app.py
+pause

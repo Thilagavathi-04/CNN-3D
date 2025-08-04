@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Feature Visualizer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+    <div class="tutorial-nav">
+        <button class="tab-btn active" data-tab="demo">CNN Visualizer</button>
+    </div>
+
+    <div class="tutorial-content">
+        <!-- Demo Tab -->
+        <div id="demo" class="tab-content active">
+            <div class="lesson-card">
+                <h2>CNN Feature Visualizer</h2>
+                
+                <div class="container">
+                    <!-- Left Column: Upload and Analysis -->
+                    <div class="left-column">
+                        <!-- Upload Section -->
+                        <div class="upload-section">
+                            <h3>📁 Upload Your Image</h3>
+                            <div class="upload-area" id="uploadArea">
+                                <input type="file" id="imageInput" accept="image/*" />
+                                <div class="upload-text">
+                                    <span class="upload-icon">📷</span>
+                                    <p>Click to select an image</p>
+                                    <small>Supports: JPG, PNG, GIF, BMP</small>
+                                </div>
+                            </div>
+                            <button id="uploadBtn" disabled>🔍 Analyze Features</button>
+                            <div id="status" class="status">Select an image to start</div>
+                        </div>
+
+                        <!-- Analysis Section -->
+                        <div class="info-section">
+                            <h3>📊 Feature Analysis</h3>
+                            <div id="imagePreview" class="image-preview">
+                                <p class="placeholder">No image selected</p>
+                            </div>
+                            <div id="featureInfo" class="feature-info">
+                                <p class="placeholder">Upload an image to see feature analysis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: 3D Visualization (Expanded) -->
+                    <div class="right-column-expanded">
+                        <!-- 3D Visualization -->
+                        <div class="visualization-section">
+                            <h3>🎯 3D CNN Process Visualization</h3>
+                            
+                            <!-- CNN Pipeline Controls -->
+                            <div class="cnn-pipeline-controls">
+                                <h4>🧠 See How CNN Works Step-by-Step</h4>
+                                <div class="pipeline-buttons">
+                                    <button id="showInputStep" class="pipeline-btn">📷 Step 1: Input Image</button>
+                                    <button id="showConvStep" class="pipeline-btn">🔍 Step 2: Convolution</button>
+                                    <button id="showReluStep" class="pipeline-btn">⚡ Step 3: ReLU</button>
+                                    <button id="showPoolStep" class="pipeline-btn">📉 Step 4: Pooling</button>
+                                    <button id="showFeaturesStep" class="pipeline-btn">🎯 Step 5: Features</button>
+                                    <button id="showPredictionStep" class="pipeline-btn">🏆 Step 6: Prediction</button>
+                                    <button id="resetPipeline" class="pipeline-btn reset">🔄 Reset</button>
+                                </div>
+                                <div id="pipelineExplanation" class="pipeline-explanation">
+                                    <p>Upload an image and click the steps above to see how CNN processes it in 3D!</p>
+                                </div>
+                            </div>
+
+                            <div id="visualization" class="visualization">
+                                <div class="viz-placeholder">
+                                    <div class="viz-icon">🎨</div>
+                                    <p>3D CNN Process Visualization</p>
+                                    <small>Upload an image to see the magic happen!</small>
+                                </div>
+                            </div>
+                            <div class="controls-info">
+                                <p><strong>Controls:</strong> 🖱️ Drag to rotate • 🔍 Scroll to zoom • 📱 Touch to navigate</p>
+                            </div>
+                            
+                            <div class="axis-explanation">
+                                <div class="axis-item">
+                                    <span class="axis-color red">●</span> X-axis: Red intensity
+                                </div>
+                                <div class="axis-item">
+                                    <span class="axis-color green">●</span> Y-axis: Green intensity
+                                </div>
+                                <div class="axis-item">
+                                    <span class="axis-color blue">●</span> Z-axis: Blue intensity
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="app.js"></script>
+    <script src="tutorial.js"></script>
+</body>
+</html>

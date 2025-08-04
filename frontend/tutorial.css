@@ -1,0 +1,232 @@
+/* Lazy Days CNN Visualizer Styles */
+
+.tutorial-nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(185, 208, 196, 0.4); /* Mint with transparency */
+    backdrop-filter: blur(15px);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: 1px solid rgba(157, 181, 178, 0.5); /* Seafoam border */
+}
+
+.tab-btn {
+    background: rgba(212, 229, 216, 0.3); /* Pale mint */
+    border: 2px solid rgba(157, 181, 178, 0.4); /* Seafoam */
+    color: #2d3436; /* Dark charcoal text */
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    background: rgba(185, 208, 196, 0.5); /* Mint on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(157, 181, 178, 0.3); /* Seafoam shadow */
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #9DB5B2 0%, #F4C2C2 100%); /* Seafoam to Blush */
+    border-color: rgba(244, 194, 194, 0.6); /* Blush border */
+    color: #2d3436; /* Dark text for readability */
+    box-shadow: 0 8px 25px rgba(157, 181, 178, 0.4);
+}
+
+.tutorial-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lesson-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Two Column Layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    min-height: 600px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.right-column-expanded {
+    display: flex;
+    flex-direction: column;
+}
+
+.visualization-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#visualization {
+    flex-grow: 1;
+    min-height: 500px;
+}
+
+/* Adjust upload and analysis sections for vertical layout */
+.upload-section, .info-section {
+    background: rgba(247, 243, 233, 0.4); /* Cream background */
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(157, 181, 178, 0.3); /* Seafoam border */
+    box-shadow: 0 8px 25px rgba(157, 181, 178, 0.15); /* Seafoam shadow */
+}
+
+/* CNN Pipeline Controls */
+.cnn-pipeline-controls {
+    background: rgba(212, 229, 216, 0.4); /* Pale mint background */
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(185, 208, 196, 0.4); /* Mint border */
+    box-shadow: 0 8px 25px rgba(157, 181, 178, 0.15);
+}
+
+.cnn-pipeline-controls h4 {
+    color: #2d3436; /* Dark text */
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.pipeline-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.pipeline-btn {
+    background: linear-gradient(135deg, #9DB5B2 0%, #B9D0C4 100%); /* Seafoam to Mint */
+    border: none;
+    color: #2d3436; /* Dark text */
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(157, 181, 178, 0.3); /* Seafoam shadow */
+}
+
+.pipeline-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(185, 208, 196, 0.4); /* Mint shadow */
+}
+
+.pipeline-btn.active {
+    background: linear-gradient(135deg, #F4C2C2 0%, #E8C5A0 100%); /* Blush to Nude */
+    color: #2d3436; /* Dark text */
+    box-shadow: 0 8px 25px rgba(244, 194, 194, 0.4); /* Blush shadow */
+}
+
+.pipeline-btn.reset {
+    background: linear-gradient(135deg, #F4C2C2 0%, #9DB5B2 100%); /* Blush to Seafoam */
+}
+
+.pipeline-btn.reset:hover {
+    box-shadow: 0 8px 25px rgba(244, 194, 194, 0.4);
+}
+
+.pipeline-explanation {
+    background: rgba(247, 243, 233, 0.3); /* Cream background */
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #2d3436; /* Dark text */
+    font-size: 0.95rem;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tutorial-nav {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tab-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .lesson-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .tutorial-content {
+        padding: 0 0.5rem;
+    }
+
+    /* Mobile: Stack columns vertically */
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pipeline-buttons {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .pipeline-btn {
+        padding: 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .cnn-pipeline-controls {
+        padding: 1rem;
+    }
+
+    #visualization {
+        min-height: 400px;
+    }
+}
